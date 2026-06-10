@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { animate, random } from 'animejs';
-import { BellRing, VolumeX } from 'lucide-react';
+import { BellRing, VolumeX, Menu } from 'lucide-react';
 
 // Hooks
 import { useSupabase } from './hooks/useSupabase';
@@ -434,7 +434,18 @@ Cuando el usuario lo pida, responde con normalidad Y al final añade exactamente
         userProfile={userProfile}
       />
 
-      <main style={{ flex: 1, display: 'flex', position: 'relative', overflow: 'hidden' }}>
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
+        {currentView !== 'chat' && (
+          <div className="mobile-global-header">
+            <button className="menu-toggle" onClick={() => setSidebarOpen(true)}>
+              <Menu size={24} />
+            </button>
+            <span className="view-title-small" style={{ textTransform: 'capitalize' }}>
+              {currentView === 'auth' ? 'Iniciar Sesión' : currentView}
+            </span>
+          </div>
+        )}
+        
         {currentView === 'chat' && (
           <Chat
             messages={messages}

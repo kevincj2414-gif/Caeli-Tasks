@@ -131,7 +131,7 @@ export const Alarms: React.FC<AlarmsProps> = ({
           </h3>
 
           <form onSubmit={handleAddAlarm} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '16px' }}>
+            <div className="responsive-grid alarm-grid">
               <div className="form-group" style={{ margin: 0 }}>
                 <label className="form-label">Hora</label>
                 <input 

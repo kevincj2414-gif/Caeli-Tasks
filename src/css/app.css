@@ -510,6 +510,38 @@ body {
   border-color: var(--clr-muted);
 }
 
+/* Form Grid Utilities */
+.responsive-grid {
+  display: grid;
+  gap: 16px;
+}
+.task-grid {
+  grid-template-columns: 1.5fr 1fr;
+}
+.alarm-grid {
+  grid-template-columns: 1fr 2fr;
+}
+
+/* Mobile Global Header */
+.mobile-global-header {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.mobile-global-header .view-title-small {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+
 /* Alarm Specific Styles */
 .alarm-list {
   display: flex;
@@ -897,7 +929,15 @@ input:checked + .slider:before {
     max-width: 100%;
   }
   
+  .responsive-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .mobile-global-header {
+    display: flex;
+  }
+
   .view-panel {
-    padding: 24px 16px;
+    padding: 16px 12px;
   }
 }

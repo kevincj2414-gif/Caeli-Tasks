@@ -118,7 +118,7 @@ export const Tasks: React.FC<TasksProps> = ({
               />
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '16px' }}>
+            <div className="responsive-grid task-grid">
               <div className="form-group" style={{ margin: 0 }}>
                 <label className="form-label">Detalles / Nota</label>
                 <input 
