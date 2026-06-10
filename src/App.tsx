@@ -470,6 +470,32 @@ Cuando el usuario lo pida, responde con normalidad Y al final añade exactamente
         )}
       </main>
 
+      {/* PWA Install Floating Button */}
+      {deferredPrompt && (
+        <button 
+          onClick={async () => {
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+              setDeferredPrompt(null);
+            }
+          }}
+          className="btn-primary"
+          style={{
+            position: 'fixed',
+            top: '16px',
+            right: '16px',
+            zIndex: 9999,
+            padding: '8px 16px',
+            borderRadius: '20px',
+            fontSize: '0.85rem',
+            boxShadow: '0 4px 15px rgba(138, 43, 226, 0.6)'
+          }}
+        >
+          Instalar App
+        </button>
+      )}
+
       {firingAlarm && (
         <div className="alarm-overlay">
           <div className="alarm-popup">

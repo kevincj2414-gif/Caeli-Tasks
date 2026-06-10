@@ -9,8 +9,7 @@ export const useNvidiaEmbeddings = () => {
     }
 
     try {
-      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-      const baseUrl = isLocal ? '/nvidia-api' : 'https://integrate.api.nvidia.com';
+      const baseUrl = '/nvidia-api';
       const response = await fetch(`${baseUrl}/v1/embeddings`, {
         method: 'POST',
         headers: {
