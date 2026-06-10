@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color System */
+  --bg-dark-base: 240 10% 3.5%;
+  --bg-dark-sidebar: 240 10% 5.5%;
+  --bg-dark-card: 240 10% 8%;
+  
+  --accent-purple: 270 95% 65%;
+  --accent-cyan: 195 100% 50%;
+  --accent-rose: 340 95% 60%;
+  
+  --text-primary: 0 0% 98%;
+  --text-secondary: 240 5% 70%;
+  --text-muted: 240 4% 45%;
+  
+  /* State Colors */
+  --color-success: 142 70% 45%;
+  --color-warning: 38 92% 50%;
+  --color-error: 0 84% 60%;
+  
+  /* HSL Helpers */
+  --clr-bg: hsl(var(--bg-dark-base));
+  --clr-sidebar: hsl(var(--bg-dark-sidebar));
+  --clr-card: hsl(var(--bg-dark-card));
+  --clr-purple: hsl(var(--accent-purple));
+  --clr-cyan: hsl(var(--accent-cyan));
+  --clr-rose: hsl(var(--accent-rose));
+  --clr-primary: hsl(var(--text-primary));
+  --clr-secondary: hsl(var(--text-secondary));
+  --clr-muted: hsl(var(--text-muted));
+  
+  /* Glassmorphism system */
+  --glass-bg: rgba(10, 10, 15, 0.55);
+  --glass-bg-hover: rgba(20, 20, 30, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-border-hover: rgba(255, 255, 255, 0.12);
+  --glass-blur: blur(20px);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Typography */
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}

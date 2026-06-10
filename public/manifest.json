@@ -1,0 +1,17 @@
+{
+  "short_name": "Kimi AI",
+  "name": "Kimi AI Chat & Alarms",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0b0b0f",
+  "theme_color": "#0b0b0f",
+  "display": "standalone",
+  "orientation": "portrait"
+}
